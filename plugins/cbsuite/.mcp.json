@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "cbsuite": {
+      "type": "http",
+      "url": "https://cbsuite.cbinteligencia.com/mcp",
+      "oauth_resource": "https://cbsuite.cbinteligencia.com/mcp"
+    }
+  }
+}

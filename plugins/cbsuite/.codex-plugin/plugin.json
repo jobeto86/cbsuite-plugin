@@ -1,0 +1,27 @@
+{
+  "name": "cbsuite",
+  "version": "0.1.0",
+  "description": "Opera CBSuite ERP en lenguaje natural: ventas, clientes, inventario, compras, caja, cobranza y soporte.",
+  "author": {
+    "name": "CB Inteligencia",
+    "url": "https://cbinteligencia.com"
+  },
+  "repository": "https://github.com/jobeto86/biank-plugin",
+  "keywords": ["erp", "cbsuite", "ventas", "inventario", "cobranza"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "CBSuite",
+    "shortDescription": "Tu ERP en lenguaje natural",
+    "longDescription": "Consulta ventas, clientes, inventario, compras, caja y cobranza de CBSuite, y reporta fallas al equipo de soporte. Toda operación que mueva dinero pide confirmación.",
+    "developerName": "CB Inteligencia",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://cbinteligencia.com",
+    "defaultPrompt": [
+      "¿Cuánto vendimos esta semana?",
+      "¿Quién me debe y desde cuándo?",
+      "¿Qué productos están por agotarse?"
+    ]
+  }
+}

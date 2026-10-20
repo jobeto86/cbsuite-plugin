@@ -6,8 +6,17 @@ acciones vienen del MCP de CBSuite (TSK-479).
 
 ## Estructura
 
-- `skills/<nombre>/SKILL.md` — una skill por carpeta, formato Agent Skills
-  (frontmatter `name` + `description`).
+El repo es un marketplace de complementos de ChatGPT (Personalizar →
+Complementos → Agregar marketplace → `jobeto86/biank-plugin`).
+
+- `.agents/plugins/marketplace.json` — catálogo con el complemento `cbsuite`.
+- `plugins/cbsuite/.codex-plugin/plugin.json` — manifiesto.
+- `plugins/cbsuite/skills/<nombre>/SKILL.md` — una skill por carpeta, formato
+  Agent Skills (frontmatter `name` + `description`).
+- `plugins/cbsuite/.mcp.json` — MCP remoto de CBSuite para Codex.
+- `plugins/cbsuite/.app.json` (pendiente) — liga al conector de CBSuite en
+  ChatGPT; es lo que usan Chat y Work. Requiere el custom connector de CUR-351
+  creado en el workspace para obtener su `connector_…`.
 
 ## Reglas del paquete
 
@@ -31,4 +40,5 @@ Quedaron fuera las skills propias de Biank Desktop: `actualizarme`,
 - `revision-semanal` y `buscar-archivo`: dependían de memoria y scripts
   locales; decidir si se rehacen sobre MCP o se descartan.
 - Protocolo `receipt_capture` (captura de comprobantes) como skill.
-- Manifiestos de empaquetado por arnés (ChatGPT Work, Claude, Codex).
+- `.app.json` con el id del conector de CBSuite (ver Estructura).
+- Empaquetado para Claude.

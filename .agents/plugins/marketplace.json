@@ -1,0 +1,20 @@
+{
+  "name": "cb-inteligencia",
+  "interface": {
+    "displayName": "CB Inteligencia"
+  },
+  "plugins": [
+    {
+      "name": "cbsuite",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cbsuite"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
