@@ -5,6 +5,8 @@ description: "Buscar clientes en el ERP: saldo, estado de cuenta, historial y li
 
 # Skill: Consultar Clientes
 
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
+
 **Trigger**: "busca a [cliente]", "¿cuánto debe [cliente]?", "estado de cuenta de [cliente]",
 "¿tiene crédito disponible?", "historial de [cliente]"
 

@@ -1,9 +1,11 @@
 ---
 name: ayuda
-description: "Presentar lo que Biank puede hacer con CBSuite y cómo pedirlo. Triggers: 'ayuda', 'qué puedes hacer', 'comandos', 'instrucciones', 'cómo funciona esto', o cuando el usuario no sabe por dónde empezar."
+description: "Presentar lo que el complemento CBSuite puede hacer y cómo pedirlo. Triggers: 'ayuda', 'qué puedes hacer', 'comandos', 'instrucciones', 'cómo funciona esto', o cuando el usuario no sabe por dónde empezar."
 ---
 
 # Skill: Ayuda
+
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
 
 **Trigger**: "ayuda", "¿qué puedes hacer?", "comandos", "instrucciones", "¿cómo funciona esto?"
 
@@ -18,7 +20,7 @@ usuario ya lo vio en esta conversación: responde directo a lo que pregunta.
 
 ## Resumen que presentas
 
-¡Hola! Soy **Biank**, tu asistente de operaciones en CBSuite. 😊
+¡Hola! Soy tu asistente de operaciones en **CBSuite**. 😊
 
 Puedo ayudarte con estas áreas — solo dime lo que necesitas en español natural:
 

@@ -5,6 +5,8 @@ description: "Reportar al equipo de soporte una falla o error del SISTEMA (el ER
 
 # Skill: Reportar a Soporte
 
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
+
 **Trigger**: "esto está mal", "el sistema no calcula bien", "no me deja timbrar/guardar",
 "me da un error", "repórtalo a soporte", "avísale al equipo que hace el sistema",
 "pásale esto a los técnicos" — y para tareas: "asígnale una tarea a [compañero]",

@@ -5,6 +5,8 @@ description: "Revisar cartera vencida, clientes morosos e interacciones de cobra
 
 # Skill: Consultar Cobranza
 
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
+
 **Trigger**: "cartera vencida", "clientes que deben", "¿a quién hay que cobrarle?",
 "seguimiento a [cliente]", "registra que hablé con [cliente]", "promesas de pago"
 

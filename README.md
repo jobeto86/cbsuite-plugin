@@ -1,6 +1,6 @@
-# biank-plugin
+# Plugin CBSuite (marketplace CB Inteligencia)
 
-Plugin de Biank para arnés comercial: ChatGPT Work para el cliente final y, del
+Complemento `cbsuite` para arnés comercial: ChatGPT Work para el cliente final y, del
 mismo fuente, Claude y Codex. El producto son las skills; los datos y las
 acciones vienen del MCP de CBSuite (TSK-479).
 

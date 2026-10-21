@@ -5,6 +5,8 @@ description: "Listar compras, saldos con proveedores y estado de pago en el ERP.
 
 # Skill: Consultar Compras
 
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
+
 **Trigger**: "¿qué le debemos a [proveedor]?", "compras pendientes", "compras de [período]",
 "estado de cuenta de [proveedor]", "¿cuánto le hemos comprado a [proveedor]?"
 

@@ -5,6 +5,8 @@ description: "Consultar ventas del ERP con filtros: lista por periodo/cliente/es
 
 # Skill: Consultar Ventas
 
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
+
 **Trigger**: "¿cuánto vendimos?", "busca la venta de [cliente]", "ventas de hoy/semana/mes",
 "¿me muestras la venta [folio]?", "ventas pendientes de cobrar"
 

@@ -5,6 +5,8 @@ description: "Consultar saldo actual de caja y movimientos del periodo en el ERP
 
 # Skill: Consultar Caja
 
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
+
 **Trigger**: "¿cuánto hay en caja?", "saldo de caja", "movimientos de hoy",
 "¿cuadra la caja?", "movimientos de [caja] de [fecha]"
 

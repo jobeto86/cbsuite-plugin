@@ -5,6 +5,8 @@ description: "Registrar un abono/pago de cliente a una venta en el ERP: valida m
 
 # Skill: Registrar Abono
 
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
+
 **Trigger**: "registra un pago de [cliente]", "abono de $[X] a la venta [folio]",
 "[cliente] pagó $[X]", "registra el pago"
 
@@ -19,7 +21,7 @@ Registra un abono (pago) a una venta en el ERP.
 
 ### 1. Recopilar datos necesarios
 
-Biank necesita obligatoriamente:
+Necesitas obligatoriamente:
 - **Cliente** o **folio de venta** — ¿a qué venta va el pago?
 - **Monto** — ¿cuánto pagó?
 - **Forma de pago** — efectivo / transferencia / tarjeta / cheque

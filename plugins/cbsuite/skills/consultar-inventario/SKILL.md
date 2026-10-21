@@ -5,6 +5,8 @@ description: "Consultar existencias por producto, historial de inventario y aler
 
 # Skill: Consultar Inventario
 
+> Si una herramienta que nombra esta skill no aparece en tu lista, búscala con `buscarHerramientas` y ejecútala con `ejecutarHerramienta`; nunca digas que no existe sin buscarla.
+
 **Trigger**: "¿cuánto hay de [producto]?", "stock de [producto]", "existencias",
 "productos que se están acabando", "productos críticos", "¿tenemos [X]?"
 
