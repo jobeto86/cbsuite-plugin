@@ -25,7 +25,7 @@ Necesitas obligatoriamente:
 - **Cliente** o **folio de venta** — ¿a qué venta va el pago?
 - **Monto** — ¿cuánto pagó?
 - **Forma de pago** — efectivo / transferencia / tarjeta / cheque
-- **Caja** — ¿a qué caja entra? (si hay más de una)
+- **Caja** — ¿a qué caja entra? Toma las opciones de `listarCajasCaptura` (activa, compatible con la forma de pago); si hay una sola, úsala, pero pasa siempre su `cajaId`.
 
 Si falta alguno, preguntar antes de continuar.
 
@@ -52,7 +52,7 @@ Caja:    [nombre de caja]
 ### 4. Ejecutar
 
 Solo después de confirmación explícita ("sí", "confirmo", "dale"):
-- Tool: `registrarAbonoVenta` con ventaId, monto, formaPago, tipoCaja
+- Tool: `registrarAbonoVenta` con `ventaId`, `monto`, `formaPago`, `cajaId` (obligatorio) y `referencia` si hay folio de transferencia o cheque
 
 ### 5. Confirmar resultado
 
