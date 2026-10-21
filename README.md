@@ -7,7 +7,7 @@ acciones vienen del MCP de CBSuite (TSK-479).
 ## Estructura
 
 El repo es un marketplace de complementos de ChatGPT (Personalizar →
-Complementos → Agregar marketplace → `jobeto86/biank-plugin`).
+Complementos → Agregar marketplace → `jobeto86/cbsuite-plugin`).
 
 - `.agents/plugins/marketplace.json` — catálogo con el complemento `cbsuite`.
 - `plugins/cbsuite/.codex-plugin/plugin.json` — manifiesto.
