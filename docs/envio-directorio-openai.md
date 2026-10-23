@@ -35,9 +35,9 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 - [ ] **Autorizar el token de dominio en producción**: servir el texto exacto que dé
       OpenAI en `https://cbsuite.cbinteligencia.com/.well-known/openai-apps-challenge`
       (hoy 404).
-- [ ] **Decidir la superficie de producción**: con la bandera B4 apagada (prod), el
-      token de ChatGPT recibe el perfil curado `chatgpt-v1` y quedan fuera tools que
-      usan las skills (abajo). Encenderla en prod o ajustar las skills es decisión tuya.
+- [x] **Superficie de producción**: B4 encendida en prod (verificado 2026-10-23,
+      `release/2026-10-22`). ChatGPT recibe núcleo + descubrimiento; las skills alcanzan
+      todas sus tools, filtradas por RBAC.
 - [ ] **Grabar el video demo** y hacer el envío (Plugins → Upload new or existing plugin).
 
 ## Le toca a Marvin (cuando lo anterior se destrabe)
@@ -51,8 +51,8 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 
 ## Skills contra el perfil curado `chatgpt-v1`
 
-Con B4 apagada, estas skills llaman tools que el perfil no incluye y fallarían ante
-el revisor:
+Histórico: con B4 apagada, estas skills llamarían tools que el perfil no incluye. Desde
+el 2026-10-23 B4 está encendida en prod y las alcanzan vía `ejecutarHerramienta`:
 
 | Skill | Tools fuera del perfil |
 |---|---|
