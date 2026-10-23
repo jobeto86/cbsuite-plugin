@@ -1,7 +1,7 @@
 # Envío de CBSuite al directorio público de OpenAI
 
 Estado al 2026-10-23. Spec rector: `cbsuite-erp/docs/specs/conector-chatgpt.spec.md`
-(CUR-351, meta de envío 2026-11-13). Requisitos tomados de guías de terceros: la
+(CUR-351). **Envío: 2026-11-03** (adelantado por Roberto); todo listo el 2026-10-31. Requisitos tomados de guías de terceros: la
 documentación oficial de OpenAI respondió 403; se confirman en el dashboard.
 
 ## Paquete
@@ -19,7 +19,7 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 
 - [x] ZIP dentro de límites, manifiesto válido, logo de marca.
 - [x] OAuth del MCP: discovery, DCR, RFC 9207 y callbacks de ChatGPT (CUR-144).
-- [x] 480 de 482 tools declaran `readOnlyHint` / `destructiveHint` / `openWorldHint`.
+- [x] Las 486 tools declaran `readOnlyHint` / `destructiveHint` / `openWorldHint`.
 - [x] Escrituras fiscales con vista previa y `confirmed=true` del lado del servidor.
 
 ## Le toca a Roberto
@@ -47,7 +47,8 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 - [ ] 5 casos positivos y 3 negativos, con prompts y resultado esperado.
 - [ ] Capturas (ancho por confirmar: 706 px) y notas de versión.
 - [ ] Publicar las páginas legales y el token una vez autorizados.
-- [ ] Anotar las 2 tools sin hints.
+- [x] Hints: las 486 tools declaran `readOnlyHint` / `destructiveHint` / `openWorldHint` (verificado 2026-10-23).
+- [x] Casos de prueba redactados: `docs/casos-revision-openai.md`.
 
 ## Skills contra el perfil curado `chatgpt-v1`
 
