@@ -29,9 +29,8 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 - [ ] **Datos del responsable** para el aviso de privacidad: razón social, domicilio,
       RFC y correo ARCO (Anexo A del spec).
 - [ ] **Revisión de abogado** del aviso y los términos del Anexo A.
-- [ ] **Autorizar publicar en `cbinteligencia.com`** las páginas de privacidad,
-      términos y soporte. Hoy `/privacidad`, `/terminos` y `/soporte` no existen:
-      el sitio responde la portada.
+- [x] Páginas publicadas: `https://cbinteligencia.com/privacidad/`, `/terminos/` y `/soporte/`
+      (responsable José Roberto Ramírez Aguilar; revisión de abogado pendiente por decisión de Roberto).
 - [ ] **Autorizar el token de dominio en producción**: servir el texto exacto que dé
       OpenAI en `https://cbsuite.cbinteligencia.com/.well-known/openai-apps-challenge`
       (hoy 404).
@@ -42,8 +41,9 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 
 ## Le toca a Marvin (cuando lo anterior se destrabe)
 
-- [ ] Tenant demo con datos sintéticos y usuario revisor sin 2FA, membresía sólo ahí
-      (spec §4, fecha 2026-11-10). Credenciales por el dashboard, nunca en el repo.
+- [x] Tenant demo «Distribuidora Demo del Bajío» (`demo-revisor`) y usuario `revisor.openai`
+      sembrados en prod el 2026-10-23 (`release/2026-10-23-2`), verificados por OAuth. Contraseña
+      en `~/.marvin/state/cbsuite-demo-revisor-prod.env`; se entrega sólo por el dashboard.
 - [ ] 5 casos positivos y 3 negativos, con prompts y resultado esperado.
 - [ ] Capturas (ancho por confirmar: 706 px) y notas de versión.
 - [ ] Publicar las páginas legales y el token una vez autorizados.

@@ -24,6 +24,6 @@ antes del envío, en ChatGPT web y en escritorio, y se anota el resultado aquí.
 
 ## Antes de grabar
 
-- [ ] Tenant demo aplicado en producción (pendiente de autorización de Roberto).
-- [ ] Datos del tenant demo confirmados para P2, P3 y P4 (cliente con saldo vencido, productos bajo mínimo, venta a crédito abierta).
+- [x] Tenant demo aplicado en producción (2026-10-23, `release/2026-10-23-2`).
+- [x] Datos confirmados en prod como el revisor: ventas de la semana $9,011 en 8, cartera vencida $9,970, productos bajo mínimo, `cbzamora` → 403.
 - [ ] Revisar `reportar-soporte`: su descripción dice que se activa «por mí misma» al detectar fallas. Un revisor puede leerlo como acción no pedida; conviene que sólo cree tickets a petición del usuario.
