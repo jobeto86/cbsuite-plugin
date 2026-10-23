@@ -37,7 +37,10 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 - [x] **Superficie de producción**: B4 encendida en prod (verificado 2026-10-23,
       `release/2026-10-22`). ChatGPT recibe núcleo + descubrimiento; las skills alcanzan
       todas sus tools, filtradas por RBAC.
-- [ ] **Grabar el video demo** y hacer el envío (Plugins → Upload new or existing plugin).
+- [x] **Video demo grabado** (2026-10-23). Recorrido real desde chatgpt.com con `revisor.openai`:
+      primera autorización con callback de ChatGPT en prod (12:35) y 5 tools en `demo-revisor`
+      (perfil, membresías, ventas, cartera, productos críticos) sin errores.
+- [ ] Hacer el envío (Plugins → Upload new or existing plugin) con `dist/cbsuite-0.1.3.zip`.
 
 ## Le toca a Marvin (cuando lo anterior se destrabe)
 
