@@ -9,6 +9,8 @@ Usa `listarCompras`, `verCompra`, `buscarProveedores` y `estadoCuentaProveedor`.
 
 Si el usuario pide crear una compra, usa `crearCompra` después de mostrar proveedor, productos, cantidades e importes y obtener confirmación. Para un pago ya efectuado usa `registrarAbonoCompra`, confirmando compra, monto, forma de pago y caja seleccionada mediante `listarCajasCaptura`. No ejecutes transferencias ni solicites datos bancarios sensibles.
 
+Al crear una compra, confirma si cuenta con factura del proveedor (`esFacturada`); no supongas que es false. Si es true, pide sólo el código de clasificación `usoCFDI` requerido por el esquema. Registrar esa clasificación no emite ni importa una factura: no solicites RFC, identificaciones, XML ni PDF.
+
 ## Reglas del perfil público
 
 - Confirma la empresa con `listarMisMembresias` y `tenantActual`; usa su `tenantSlug` en las operaciones.
