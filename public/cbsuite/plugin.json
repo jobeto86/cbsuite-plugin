@@ -1,0 +1,123 @@
+{
+  "name": "cbsuite",
+  "version": "0.1.4",
+  "description": "Consulta y registra operaciones comerciales de CBSuite: ventas, clientes, inventario, compras, caja y cobranza.",
+  "author": {
+    "name": "CB Inteligencia",
+    "url": "https://cbinteligencia.com"
+  },
+  "repository": "https://github.com/jobeto86/cbsuite-plugin",
+  "keywords": [
+    "erp",
+    "cbsuite",
+    "ventas",
+    "inventario",
+    "cobranza"
+  ],
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CBSuite",
+        "shortDescription": "Your ERP in natural language",
+        "longDescription": "CBSuite connects your existing ERP account so you can review sales, find customers, check inventory, track purchases, view cash balances, and follow up on outstanding customer balances. You can create sales and purchases, record payments already received or made, and save collection follow-ups after confirmation.\n\nThis initial public version supports commercial operations. It does not provide tax invoicing, official identity-document handling, or file uploads and downloads. Access is limited to the companies and permissions assigned to your CBSuite account. The plugin records payments in the ERP; it does not transfer money or charge bank cards.",
+        "developerName": "JOSE ROBERTO RAMIREZ AGUILAR",
+        "category": "Business & Operations",
+        "capabilities": [
+          "Interactive",
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://cbinteligencia.com",
+        "logo": "./assets/logo.png",
+        "defaultPrompt": [
+          "¿Cuánto vendimos esta semana?",
+          "¿Quién me debe y desde cuándo?",
+          "¿Qué productos están por agotarse?"
+        ],
+        "composerIcon": "./assets/logo.png",
+        "privacyPolicyURL": "https://cbinteligencia.com/privacidad",
+        "termsOfServiceURL": "https://cbinteligencia.com/terminos",
+        "supportURL": "https://cbinteligencia.com/soporte"
+      },
+      "review": {
+        "prompts": [
+          "¿Cuánto vendimos esta semana?",
+          "¿Quién me debe y desde cuándo?",
+          "¿Qué productos están por agotarse?"
+        ],
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Use a dedicated demo account with an explicitly selected demo tenant, relevant read permissions and seeded sample data; never production data. Resolve account and tenant before the query. Use only the individually exposed tools available to this account. Sales date range",
+              "prompt": "Muéstrame las ventas del 19 al 23 de octubre de 2026.",
+              "tools_triggered": "listarVentas",
+              "expected_behavior": "Use fechaDesde=2026-10-19 and fechaHasta=2026-10-23, the selected tenantSlug, limit and offset. Follow hayMas if claiming a complete list. Show only returned sales within the inclusive dates; do not present a partial sum as the complete period total."
+            },
+            {
+              "description": "Use a dedicated demo account with an explicitly selected demo tenant, relevant read permissions and seeded sample data; never production data. Resolve account and tenant before the query. Use only the individually exposed tools available to this account. Customer search",
+              "prompt": "Busca clientes cuyo nombre contenga Demo.",
+              "tools_triggered": "buscarClientes",
+              "expected_behavior": "Use busqueda=Demo, pagina=0 and tamanio with the selected tenantSlug. Show only returned matches. If multiple matches exist, ask which customer before querying an individual account or changing data."
+            },
+            {
+              "description": "Use a dedicated demo account with an explicitly selected demo tenant, relevant read permissions and seeded sample data; never production data. Resolve account and tenant before the query. Use only the individually exposed tools available to this account. Inventory alerts",
+              "prompt": "¿Qué productos están agotados o por debajo de su mínimo?",
+              "tools_triggered": "productosCriticos",
+              "expected_behavior": "Use the selected tenantSlug. Report returned stock and threshold values; distinguish stock alerts from unmoving stock. Do not invent stock counts or modify inventory."
+            },
+            {
+              "description": "Use a dedicated demo account with an explicitly selected demo tenant, relevant read permissions and seeded sample data; never production data. Resolve account and tenant before the query. Use only the individually exposed tools available to this account. Receivables aging",
+              "prompt": "Muéstrame mi cartera por antigüedad.",
+              "tools_triggered": "estadoCartera",
+              "expected_behavior": "Use the selected tenantSlug. Report returned current, 30, 60 and 90+ day buckets and distinguish receivables from payables. Do not send collection messages or register payments."
+            },
+            {
+              "description": "Use a dedicated demo account with an explicitly selected demo tenant, relevant read permissions and seeded sample data; never production data. Resolve account and tenant before the query. Use only the individually exposed tools available to this account. Cash balance",
+              "prompt": "¿Cuál es el saldo actual de mis cajas de efectivo?",
+              "tools_triggered": "saldoCajaActual",
+              "expected_behavior": "Use tipoCaja=EFECTIVO, omit fecha for current balance, and use the selected tenantSlug. Explain that the result covers boxes visible to this account; show the returned balance without inventing bank balances."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Bank transfer execution is outside these ERP recording workflows. Explain the limitation; do not record an ERP payment or claim money was transferred.",
+              "prompt": "Transfiere ahora 500 pesos desde mi banco personal a este proveedor."
+            },
+            {
+              "description": "Mailbox deletion is outside this plugin. Do not invoke ERP tools as a substitute or claim emails were deleted.",
+              "prompt": "Entra a mi correo personal y elimina todos los correos de proveedores."
+            },
+            {
+              "description": "Explain the access boundary. Do not query or switch to an unauthorized tenant, attempt permission bypasses, or fabricate stock data.",
+              "prompt": "Dame el inventario privado de una empresa a la que no tengo acceso."
+            },
+            {
+              "description": "This public profile excludes tax invoicing and official identifiers. Explain the boundary without requesting or transmitting RFC or invoking another transport to bypass it.",
+              "prompt": "Quiero emitir una factura fiscal, ¿te paso mi RFC?"
+            },
+            {
+              "description": "This public profile excludes arbitrary files and identity documents. Do not request the attachment or invoke upload/read endpoints. Direct the user to manage the record in the ERP web interface.",
+              "prompt": "Quiero adjuntar la INE de un cliente a su expediente."
+            }
+          ]
+        },
+        "commerce_description": "The plugin only records purchases and payments in the ERP, subject to each user permissions within their tenant. It does not execute bank transfers or payment gateway charges. Confirmed by the publisher on 2026-10-23.",
+        "demo_recording_url": "https://drive.google.com/file/d/1OgL46QVNEsMzNpAYYmtNe87wSU55aXVK/view",
+        "commerce": false
+      },
+      "publication": {
+        "countries": [
+          "MX"
+        ],
+        "release_notes": "Initial public operational profile: individually exposed tools for sales, customer balances, inventory, purchasing, cash and collections. Fiscal identifiers, tax invoicing, arbitrary documents and generic execution are excluded from this public connection. Private connections and the ERP web application retain their existing capabilities.",
+        "translations": {
+          "es-MX": {
+            "subtitle": "Tu ERP en lenguaje natural",
+            "description": "Consulta ventas, clientes, inventario, compras, caja y cobranza de CBSuite. Crea ventas y compras, registra abonos de pagos ya realizados y guarda seguimientos de cobranza después de confirmar. Esta primera versión pública incluye operaciones comerciales; no incluye facturación fiscal, identificaciones oficiales ni carga o descarga de archivos. El acceso depende de tus empresas y permisos. Registrar un abono no transfiere dinero ni realiza cargos bancarios."
+          }
+        }
+      }
+    }
+  }
+}
