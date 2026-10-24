@@ -31,9 +31,9 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 - [ ] **Revisión de abogado** del aviso y los términos del Anexo A.
 - [x] Páginas publicadas: `https://cbinteligencia.com/privacidad/`, `/terminos/` y `/soporte/`
       (responsable José Roberto Ramírez Aguilar; revisión de abogado pendiente por decisión de Roberto).
-- [ ] **Autorizar el token de dominio en producción**: servir el texto exacto que dé
-      OpenAI en `https://cbsuite.cbinteligencia.com/.well-known/openai-apps-challenge`
-      (hoy 404).
+- [x] **Token de dominio en producción** (2026-10-23, `release/2026-10-23-4`, d8c65b3f3):
+      `https://cbsuite.cbinteligencia.com/.well-known/openai-apps-challenge` responde 200 en
+      texto plano con el token exacto (43 bytes). Falta darle «Verificar» en el portal.
 - [x] **Superficie de producción**: B4 encendida en prod (verificado 2026-10-23,
       `release/2026-10-22`). ChatGPT recibe núcleo + descubrimiento; las skills alcanzan
       todas sus tools, filtradas por RBAC.
