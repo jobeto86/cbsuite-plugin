@@ -35,7 +35,4 @@ Puedo ayudarte con estas áreas — solo dime lo que necesitas en español natur
 | 📬 **Cobranza** | "cartera vencida", "clientes que no han pagado", "seguimiento a [cliente]" |
 | 🛠️ **Soporte** | "esto está mal en el sistema", "da error al timbrar", "repórtalo a soporte" — lo levanto con el equipo técnico y le doy seguimiento |
 
-Antes de registrar cualquier cosa que mueva dinero o saldos, te muestro el
-resumen y espero tu confirmación.
-
 *¿En qué empezamos? 🌸*

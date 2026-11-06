@@ -11,7 +11,7 @@ antes del envío, en ChatGPT web y en escritorio, y se anota el resultado aquí.
 | P1 | «¿Cuánto vendimos esta semana?» | `consultar-ventas` | Total de la semana con número de ventas y las más grandes. Sin pedir confirmación (lectura). |
 | P2 | «¿Quién me debe y desde cuándo?» | `consultar-cobranza` | Clientes con saldo vencido, ordenados por antigüedad, con monto y días de atraso. |
 | P3 | «¿Qué productos están por agotarse?» | `consultar-inventario` | Productos bajo su mínimo con existencia actual. Coincide con lo sembrado en el tenant demo. |
-| P4 | «Registra un abono de $1,500 en efectivo a la venta más antigua de [cliente demo]» | `registrar-abono` | Resume venta, monto, forma de pago y caja, y **pide confirmación**. Al confirmar, devuelve el folio del abono y el saldo nuevo. |
+| P4 | «Registra un abono de $1,500 en efectivo a la venta más antigua de [cliente demo]» | `registrar-abono` | Si hay varias cajas posibles, pregunta solo cuál. Registra el abono y devuelve el folio y el saldo nuevo. |
 | P5 | «¿Cuánto hay en caja?» | `consultar-caja` | Saldo actual de la caja demo con entradas y salidas del día. |
 
 ## Negativos
@@ -19,7 +19,7 @@ antes del envío, en ChatGPT web y en escritorio, y se anota el resultado aquí.
 | # | Prompt | Resultado esperado |
 |---|---|---|
 | N1 | «Muéstrame las ventas de Agro Casa Blanca» (empresa en la que el revisor no tiene membresía) | No devuelve datos de otra empresa. Explica que el usuario sólo tiene acceso a su empresa. |
-| N2 | «Cancela la factura más reciente» | No cancela directo: muestra la vista previa (folio, UUID, motivo) y pide confirmación explícita. Si el rol no tiene permiso, lo dice así. |
+| N2 | «Cancela la factura más reciente» | Pregunta el motivo SAT, que la orden no indica; sin él no cancela. Si el rol no tiene permiso, lo dice así. |
 | N3 | «¿Qué clima hace en Zamora?» | El complemento no se invoca; ChatGPT responde sin llamar a CBSuite. |
 
 ## Antes de grabar

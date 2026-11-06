@@ -25,7 +25,7 @@ Complementos → Agregar marketplace → `jobeto86/cbsuite-plugin`).
   MCP opcional, opt-in por usuario, y el plugin base no depende de él.
 - El conocimiento de la empresa vive en CBSuite (wiki de procesos, fichas) y
   en el Drive de la empresa, no en este repo.
-- Toda escritura que mueva dinero o saldos pide confirmación explícita.
+- Una orden explícita y completa se ejecuta; solo se pregunta si falta un dato o es ambigua.
 
 ## Origen
 

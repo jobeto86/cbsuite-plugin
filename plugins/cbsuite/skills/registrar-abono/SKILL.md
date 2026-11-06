@@ -1,6 +1,6 @@
 ---
 name: registrar-abono
-description: "Registrar un abono/pago de cliente a una venta en el ERP: valida monto y REQUIERE confirmacion explicita antes de ejecutar (accion de escritura). Triggers: 'registra un pago de [cliente]', 'abono de $[X]', 'le pago [cliente]'."
+description: "Registrar un abono/pago de cliente a una venta en el ERP: valida monto y ejecuta la orden explicita y completa; pregunta solo si falta un dato o es ambigua (accion de escritura). Triggers: 'registra un pago de [cliente]', 'abono de $[X]', 'le pago [cliente]'."
 ---
 
 # Skill: Registrar Abono
@@ -15,7 +15,7 @@ description: "Registrar un abono/pago de cliente a una venta en el ERP: valida m
 ## Qué hace
 
 Registra un abono (pago) a una venta en el ERP.
-**Requiere confirmación antes de ejecutar** — es una operación que afecta caja y saldo.
+Afecta caja y saldo. Si la orden trae venta, monto, forma de pago y caja sin ambigüedad, se ejecuta; si falta algo, pregunta solo eso.
 
 ## Flujo
 
@@ -34,24 +34,12 @@ Si falta alguno, preguntar antes de continuar.
 - Tool: `verVenta` para confirmar saldo pendiente
 - Si el monto supera el saldo: informar y preguntar si quiere abonar el saldo exacto
 
-### 3. Confirmar con el usuario
+### 3. Preguntar solo si hace falta
 
-Antes de ejecutar:
-```
-⚠️ Confirma el abono:
-
-Cliente: [nombre]
-Venta:   [folio]
-Monto:   $X,XXX
-Forma:   [efectivo/transferencia/...]
-Caja:    [nombre de caja]
-
-¿Confirmas el registro?
-```
+Pregunta antes de ejecutar únicamente si falta un dato, hay varias ventas posibles o el monto supera el saldo. Di lo que ya tienes y pide lo que falta.
 
 ### 4. Ejecutar
 
-Solo después de confirmación explícita ("sí", "confirmo", "dale"):
 - Tool: `registrarAbonoVenta` con `ventaId`, `monto`, `formaPago`, `cajaId` (obligatorio) y `referencia` si hay folio de transferencia o cheque
 
 ### 5. Confirmar resultado
