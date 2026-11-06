@@ -40,7 +40,9 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 - [x] **Video demo grabado** (2026-10-23). Recorrido real desde chatgpt.com con `revisor.openai`:
       primera autorización con callback de ChatGPT en prod (12:35) y 5 tools en `demo-revisor`
       (perfil, membresías, ventas, cartera, productos críticos) sin errores.
-- [ ] Hacer el envío (Plugins → Upload new or existing plugin) con `dist/cbsuite-0.1.4.zip`.
+- [x] Primer envío hecho con 0.1.3; sigue sin alta al 2026-11-06.
+- [ ] Reenviar con `dist/cbsuite-0.1.4.zip`: el perfil público y la descripción ya no prometen
+      confirmación (`auth-mcp-stateless#INV-MCP-ST-16`, en producción desde `release/2026-11-06`).
 
 ## Le toca a Marvin (cuando lo anterior se destrabe)
 

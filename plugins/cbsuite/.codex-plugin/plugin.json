@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "CBSuite",
     "shortDescription": "Tu ERP en lenguaje natural",
-    "longDescription": "Consulta ventas, clientes, inventario, compras, caja y cobranza de CBSuite, y reporta fallas al equipo de soporte. Toda operación que mueva dinero pide confirmación.",
+    "longDescription": "Consulta ventas, clientes, inventario, compras, caja y cobranza de CBSuite, y reporta fallas al equipo de soporte. Una orden explícita y completa se ejecuta; solo pregunta si falta un dato o es ambigua.",
     "developerName": "CB Inteligencia",
     "category": "Productivity",
     "capabilities": ["Interactive", "Read", "Write"],

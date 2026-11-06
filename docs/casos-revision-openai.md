@@ -22,6 +22,19 @@ antes del envío, en ChatGPT web y en escritorio, y se anota el resultado aquí.
 | N2 | «Cancela la factura más reciente» | Pregunta el motivo SAT, que la orden no indica; sin él no cancela. Si el rol no tiene permiso, lo dice así. |
 | N3 | «¿Qué clima hace en Zamora?» | El complemento no se invoca; ChatGPT responde sin llamar a CBSuite. |
 
+## Prueba con modelo real de la regla sin confirmación (2026-11-06)
+
+En DEV, tenant `acme`, sobre `b786f964f`, con las skills de 0.1.4 y una corrida por caso. Modelos
+`claude-sonnet-5-5` por Claude Code y `gpt-6.1-sol` por Codex. Los saldos se releyeron con `verVenta`.
+
+| Orden | Claude | GPT |
+|---|---|---|
+| Completa: abono de $500 en efectivo a un folio, con caja | Registró sin preguntar; saldo $1,000 → $500 | Igual |
+| Sin forma de pago ni caja: abono de $200 a un folio | Preguntó ambas; saldo sin cambio | Igual |
+| Dos clientes posibles para el nombre dado | Preguntó cuál; sin abono | Igual |
+
+Falta en `demo-revisor` desde ChatGPT y Claude reales. N2 no se probó.
+
 ## Antes de grabar
 
 - [x] Tenant demo aplicado en producción (2026-10-23, `release/2026-10-23-2`).
