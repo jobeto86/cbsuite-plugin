@@ -1,5 +1,7 @@
 # Plugin CBSuite (marketplace CB Inteligencia)
 
+[Spec de comportamiento y criterios de aceptación](docs/plugin.spec.md)
+
 Complemento `cbsuite` para arnés comercial: ChatGPT Work para el cliente final y, del
 mismo fuente, Claude y Codex. El producto son las skills; los datos y las
 acciones vienen del MCP de CBSuite (TSK-479).

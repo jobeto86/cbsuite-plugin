@@ -1,6 +1,6 @@
 ---
 name: consultar-compras
-description: "Consultar compras y estados de cuenta de proveedores en CBSuite."
+description: "Consultar compras y estados de cuenta de proveedores o registrar remisiones en CBSuite."
 ---
 
 # Consultar compras
@@ -9,7 +9,7 @@ Usa `listarCompras`, `verCompra`, `buscarProveedores` y `estadoCuentaProveedor`.
 
 Si el usuario pide crear una compra, usa `crearCompra` cuando tengas proveedor, productos, cantidades e importes. Para un pago ya efectuado usa `registrarAbonoCompra` con compra, monto, forma de pago y la caja de `listarCajasCaptura`. Pregunta sólo si falta un dato o la orden es ambigua. No ejecutes transferencias ni solicites datos bancarios sensibles.
 
-Al crear una compra, confirma si cuenta con factura del proveedor (`esFacturada`); no supongas que es false. Si es true, pide sólo el código de clasificación `usoCFDI` requerido por el esquema. Registrar esa clasificación no emite ni importa una factura: no solicites RFC, identificaciones, XML ni PDF.
+En el perfil público, `crearCompra` registra una remisión. Una orden de compra comercial completa se puede ejecutar sin preguntar por clasificación fiscal. Si la persona pide registrar la compra como facturada o vincular su factura, indícale que debe vincular el XML del proveedor en CBSuite web. Sólo registra una remisión en ese caso si la persona la pide expresamente. Omite `esFacturada` y `usoCFDI`; la clasificación se deriva del XML vinculado en el ERP. No solicites RFC, identificaciones, XML ni PDF.
 
 ## Reglas del perfil público
 
