@@ -33,7 +33,8 @@ En DEV, tenant `acme`, sobre `b786f964f`, con las skills de 0.1.4 y una corrida 
 | Sin forma de pago ni caja: abono de $200 a un folio | Preguntó ambas; saldo sin cambio | Igual |
 | Dos clientes posibles para el nombre dado | Preguntó cuál; sin abono | Igual |
 
-Falta en `demo-revisor` desde ChatGPT y Claude reales. N2 no se probó.
+Se repitió con las ocho skills de `public/cbsuite` 0.1.5, con el mismo resultado. Fue con el catálogo de `acme`, no con
+el cliente OAuth del perfil público. Falta en `demo-revisor` desde ChatGPT y Claude reales. N2 no se probó; ese perfil no incluye facturación.
 
 ## Antes de grabar
 

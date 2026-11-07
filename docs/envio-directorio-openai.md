@@ -6,6 +6,13 @@ documentación oficial de OpenAI respondió 403; se confirman en el dashboard.
 
 ## Paquete
 
+El paquete vigente del directorio es `public/cbsuite`, con su `public/README.md`. Lo que sigue describe el primer
+paquete, 0.1.3, y se conserva como historia.
+
+```bash
+cd public/cbsuite && zip -qr -X ../../dist/cbsuite-publico-$(jq -r .version plugin.json).zip plugin.json mcp.json assets skills
+```
+
 - `dist/cbsuite-0.1.4.zip` (no versionado; se regenera abajo). 231 KB, 24 entradas
   (límites: 100 MB y 5,000). Contiene `.codex-plugin/plugin.json`, `.mcp.json`,
   `assets/logo.png` y las 9 skills. Sin secretos ni referencias a `.app.json`.
@@ -40,9 +47,10 @@ cd plugins/cbsuite && zip -qr -X ../../dist/cbsuite-$(jq -r .version .codex-plug
 - [x] **Video demo grabado** (2026-10-23). Recorrido real desde chatgpt.com con `revisor.openai`:
       primera autorización con callback de ChatGPT en prod (12:35) y 5 tools en `demo-revisor`
       (perfil, membresías, ventas, cartera, productos críticos) sin errores.
-- [x] Primer envío hecho con 0.1.3; sigue sin alta al 2026-11-06.
-- [ ] Reenviar con `dist/cbsuite-0.1.4.zip`: el perfil público y la descripción ya no prometen
-      confirmación (`auth-mcp-stateless#INV-MCP-ST-16`, en producción desde `release/2026-11-06`).
+- [x] Envío hecho con el paquete restringido `public/cbsuite` 0.1.4: el portal mostraba «Version 1.0.0 · In review» el 2026-10-26 (CUR-351).
+- [ ] Decidir si se reemplaza la versión en revisión. Si sí, usar `dist/cbsuite-publico-0.1.5.zip`: ya no promete
+      confirmación (`auth-mcp-stateless#INV-MCP-ST-16`, en producción desde `release/2026-11-06`). El ZIP de `plugins/cbsuite`
+      es el del marketplace privado: no enviarlo, porque sus skills usan herramientas fuera del perfil público.
 
 ## Le toca a Marvin (cuando lo anterior se destrabe)
 
