@@ -59,4 +59,4 @@ Total: N productos requieren atención.
 ### 4. Sugerencias automáticas
 
 - Si el stock está en cero o por debajo del mínimo, ofrecer:
-  "¿Quieres que registre una entrada de inventario o una orden de compra al proveedor?"
+  "¿Quieres que registre una entrada de almacén o una orden de compra al proveedor?"
