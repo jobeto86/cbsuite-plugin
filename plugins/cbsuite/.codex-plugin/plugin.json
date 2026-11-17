@@ -1,7 +1,7 @@
 {
   "name": "cbsuite",
-  "version": "0.1.5",
-  "description": "Opera CBSuite ERP en lenguaje natural: ventas, clientes, inventario, compras, caja, cobranza y soporte.",
+  "version": "0.1.6",
+  "description": "Opera CBSuite ERP en lenguaje natural: ventas, facturación, clientes, inventario, compras, caja, cobranza y soporte.",
   "author": {
     "name": "CB Inteligencia",
     "url": "https://cbinteligencia.com"

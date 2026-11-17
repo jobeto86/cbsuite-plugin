@@ -59,4 +59,4 @@ Compras abiertas: N
 ### 4. Ofrecer siguiente acción
 
 Si hay saldo pendiente: "¿Quieres registrar un pago a este proveedor?"
-(eso usa `registrarAbonoCompra`, con la misma regla que registrar-abono).
+(eso sigue la skill compra-a-pago, con `registrarAbonoCompra`).
