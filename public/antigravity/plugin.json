@@ -1,8 +1,8 @@
 {
   "name": "cbsuite",
   "displayName": "CBSuite",
-  "version": "0.1.5",
-  "description": "Consulta y registra operaciones comerciales de CBSuite: ventas, clientes, inventario, compras, caja y cobranza.",
+  "version": "0.1.6",
+  "description": "Consulta y opera tu ERP CBSuite: ventas, facturación, clientes, inventario, compras, caja, cobranza y reportes según los permisos de tu cuenta.",
   "author": {
     "name": "CB Inteligencia",
     "url": "https://cbinteligencia.com"
