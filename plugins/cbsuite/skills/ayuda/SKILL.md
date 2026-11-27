@@ -34,6 +34,7 @@ Puedo ayudarte con estas áreas — solo dime lo que necesitas en español natur
 | 🛒 **Compras** | "captura la compra de [proveedor]", "¿qué le debemos a [proveedor]?", "aplica el anticipo a la compra" |
 | 🏦 **Caja** | "¿cuánto hay en caja?", "movimientos de hoy" |
 | 📬 **Cobranza** | "cartera vencida", "clientes que no han pagado", "seguimiento a [cliente]" |
+| 📚 **Manuales y puestos** | "redacta el manual del puesto de [puesto]", "documenta el proceso de [tema] en la wiki" |
 | 🛠️ **Soporte** | "esto está mal en el sistema", "da error al timbrar", "repórtalo a soporte" — lo levanto con el equipo técnico y le doy seguimiento |
 
 *¿En qué empezamos? 🌸*
