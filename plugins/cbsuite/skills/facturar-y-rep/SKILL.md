@@ -20,7 +20,7 @@ Las reglas de cada herramienta están en su descripción; esta skill sólo da el
 7. **Timbrar**: `timbrarCfdi`. Si falla o se pierde la respuesta: `consultarOperacionTimbrado` → `recuperarTimbrado`.
 8. **Releer**: `verFactura`; reporta folio y UUID.
 
-Sin PAC activo: timbrada por fuera, con el XML en la Documentación del borrador, va por `timbrarFacturaManualDesdeDocumentacion`.
+Si la empresa no tiene timbrado activo: timbrada por fuera, con el XML en la Documentación del borrador, va por `timbrarFacturaManualDesdeDocumentacion`.
 
 ## Complemento de pago (sólo PPD)
 
